@@ -1,9 +1,10 @@
 class Solution:
-    def twoSum(self, nums: list[int], target: int) -> list[int]:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
         n=len(nums)
-        m=target
+        memory={}
         for i in range(n):
-            for j in range(i+1,n):
-                k=nums[i]+nums[j]
-                if k==m:return [i,j]
-                else:continue
+            m=target
+            k=nums[i]
+            m=m-k
+            if m in memory: return [memory[m],i]
+            else: memory[k]=i
