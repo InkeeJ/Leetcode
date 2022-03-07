@@ -1,3 +1,1 @@
 # Leetcode solutions
-
-Some description
