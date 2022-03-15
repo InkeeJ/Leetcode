@@ -14,7 +14,3 @@ class Solution:
 
                             
         return j
-a=Solution()
-nums=[1,1,1]
-print(a.removeDuplicates(nums))
-print(nums)
