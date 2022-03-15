@@ -10,11 +10,5 @@ class Solution:
             j=0
             for data in nums[i+1:]:
                 nums[j]=data
-                j+=1
-
-                            
+                j+=1            
         return j
-a=Solution()
-nums=[1,1,1]
-print(a.removeDuplicates(nums))
-print(nums)
