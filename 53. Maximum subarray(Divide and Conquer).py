@@ -3,11 +3,11 @@ def mca(A,start,end): #maximum crossing array
     n=end-start
     mid = n//2
     for i in range(mid+1):
-        x = sum(A[start+i:start+mid]) 
+        x = sum(A[start+i:start+mid]) # start + i , ... , start + mid -1
         if left < x: 
             left = x
     for j in range(mid,n):
-        x = sum(A[start+mid:start+j]) #start + end - start  = end  
+        x = sum(A[start+mid:start+j+1]) #j -> mid start+mid:start+mid+1 
         if right < x:
             right = x
     return left+right
