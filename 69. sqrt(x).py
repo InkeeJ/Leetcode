@@ -26,10 +26,6 @@ class Solution:
 faster
 
 '''
-
-'''
-binary search method. much faster
-'''
 class Solution:
     def mySqrt(self, x: int) -> int:
         n=0
@@ -43,6 +39,23 @@ class Solution:
             if x - (m+1)*(m+1) <0 : break
             else : m +=1
         return m
+'''
+binary search method. much faster
+'''
+class Solution:
+    def mySqrt(self, x: int) -> int:
+        l = 1
+        r = x
+        while l <= r:
+            m = (l + r) // 2
+            m2 = m ** 2
+            if m2 == x:
+                return m
+            if m2 > x:
+                r = m - 1
+            else:
+                l = m + 1
+        return l - 1
 
 '''
 similar
